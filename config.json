@@ -1,0 +1,11 @@
+{
+  "ownerNumber":  ["6281804680327@s.whatsapp.net"],
+  "botName": "Dash - Bot",
+  "packname" : "Dash Bot",
+  "author" : "❤️ Multi-Device ❤️",
+  "Prefix" : "Multi",
+  "sessionName": "Dash",
+  "Mode": "Public",
+  "pathImg": "./media/Dash.jpg",
+  "fakeImg": "./media/fake.jpg"
+}
