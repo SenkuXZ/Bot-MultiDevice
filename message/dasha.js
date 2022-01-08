@@ -801,6 +801,10 @@ let play = require('../plugins/play')
 play(q, textImg, prefix, M, dasha, sendMess, sender)
 break
 
+case 'ig': case 'instagram':
+let instagram = require('../plugins/instagram')
+instagram(M, q, sendFile, prefix, dasha)
+break
 
 case 'broadcast': case 'bcgc':
 let bcgc = require('../plugins/broadcast')
