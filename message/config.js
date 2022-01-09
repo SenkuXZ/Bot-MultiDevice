@@ -45,7 +45,7 @@ global.mess = {
     query: 'Command harus disertai Query..',
     link: 'Command harus disertai Link/Url',
     wait: 'Loading...',
-    done: 'Berhasil..'
+    done: 'Berhasil..',
     wrongFormat: 'Perintah Salah!!\nSertakan Link setelah Command..',
     example1: 'Welcome @user Di Group @subject Jangan Lupa Baca Rules @desc\n\nNote :\n1. @user (Mention User Join)\n2. @subject (Group Name)\n3. @tanggal (Date Now)\n4. @desc (Get Description Group)'
 ,
