@@ -472,7 +472,7 @@ case 'del': case 'delete': case 'd': {
 break
 
 case 'menu': case 'help': {
-sendButton5(from, help.listMenu(time, salam, pushname, prefix), help.contri(), await dasha.createMessage(from, {image: {url: setting.pathImg, caption:help.listMenu(time, salam, pushname, prefix) }}))
+sendButton5(from, help.listMenu(prefix), help.contri(), await dasha.createMessage(from, {image: {url: setting.pathImg, caption:help.listMenu(time, salam, pushname, prefix) }}))
 }
 break
 
