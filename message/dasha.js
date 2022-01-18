@@ -819,6 +819,11 @@ ytstalk(M, sendFile, q)
 break
 
 
+case 'google':
+let google = require('../plugins/google')
+google(M, dasha, fetchJson, sendFile, prefix, command, q)
+break
+
 default:
 }
 } catch (err) {
