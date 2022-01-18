@@ -812,6 +812,12 @@ bcgc(M , q , dasha, isOwner)
 break
 
 
+case 'ytstalk':
+let ytstalk = require('../plugins/ytstalk')
+ytstalk(M, sendFile, q)
+break
+
+
 default:
 }
 } catch (err) {
