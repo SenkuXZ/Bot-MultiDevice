@@ -46,9 +46,6 @@ users: {},
 chats: {},
 database: {},
 cmd: {},
-absen: {},
-tembak: {},
-game: {},
 settings: {},
 ...(global.db.data || {})
 }
