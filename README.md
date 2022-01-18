@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="" width="35%" style="margin-left: auto;margin-right: auto;display: block;">
+	<img src="https://avatars.githubusercontent.com/SenkuXZ" width="35%" style="margin-left: auto;margin-right: auto;display: block;">
 </p>
 <h1 align="center">Senkuu XZ</h1>
 
