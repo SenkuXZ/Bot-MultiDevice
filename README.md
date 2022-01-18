@@ -6,7 +6,7 @@
 
 [![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/GVwpKf83s42D1CnIfDW19G)
 
-## UNTUK PENGGUNA WINDOWS/VPS/RDP
+## For Windows / Rdp / Vps Users
 
 * Unduh & Instal Git [`Klik Disini`](https://git-scm.com/downloads)
 * Unduh & Instal NodeJS [`Klik Disini`](https://nodejs.org/en/download)
@@ -22,7 +22,7 @@ node main
 
 ---------
 
-## UNTUK PENGGUNA HEROKU
+## For Heroku Users
 
 ### Instal Buildpack
 * heroku/nodejs
