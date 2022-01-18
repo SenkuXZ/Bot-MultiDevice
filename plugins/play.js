@@ -16,7 +16,9 @@ txwoi += ' • Url Video : ' + play2.result.url_video + '\n'
 txwoi += ' • Size Audio : ' + play1.result.size + '\n'
 txwoi += ' • Size Video : ' + play2.result.size + '\n'
 txwoi += ' • Duration : ' + play1.result.duration + '\n'
-txwoi += ' • Source : ' + play1.result.source
+txwoi += ' • Source : ' + play1.result.source + '\n\n'
+txwoi += '© Senkuu'
+
 
 const ttes = [
  {buttonId: `${prefix}sendbuffer ${play1.result.url_audio}`, buttonText: {displayText: `Audio ( ${play1.result.size} )`}, type: 1}, 
