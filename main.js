@@ -1,3 +1,5 @@
+// THANKS TO DIKA ARDNT.
+
 "use strict";
 
 require('./message/config')
