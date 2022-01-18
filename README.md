@@ -1,11 +1,12 @@
+
 <p align="center">
 	<img src="https://avatars.githubusercontent.com/SenkuXZ" width="35%" style="margin-left: auto;margin-right: auto;display: block;">
 </p>
 <h1 align="center">Senkuu XZ</h1>
 
-[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/KqGdbkFsD43LQ5h3WzWkbU)
+[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/GVwpKf83s42D1CnIfDW19G)
 
-## For Windows / Rdp / Vps Users
+## UNTUK PENGGUNA WINDOWS/VPS/RDP
 
 * Unduh & Instal Git [`Klik Disini`](https://git-scm.com/downloads)
 * Unduh & Instal NodeJS [`Klik Disini`](https://nodejs.org/en/download)
@@ -21,7 +22,7 @@ node main
 
 ---------
 
-## For Heroku Users
+## UNTUK PENGGUNA HEROKU
 
 ### Instal Buildpack
 * heroku/nodejs
@@ -32,7 +33,8 @@ node main
 
 ---------
 
- [![Senkuu](https://github.com/SenkuXZ.png?size=100)](https://github.com/SenkuXZ) | [![Dika Ardnt.](https://github.com/DikaArdnt.png?size=100)](https://github.com/DikaArdnt)
-----|----
-[SenkuXZ](https://github.com/SenkuXZ) | [DikaArdnt](https://github.com/DikaArdnt)
- Creator | Thanks To
+
+ [![Senkuu](https://github.com/SenkuXZ.png?size=100)](https://github.com/SenkuXZ) | [![Dika Ardnt.](https://github.com/DikaArdnt.png?size=100)](https://github.com/DikaArdnt) | [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo)
+----|----|----
+[SenkuXZ](https://github.com/SenkuXZ) | [DikaArdnt](https://github.com/DikaArdnt) | [Nurutomo](https://github.com/Nurutomo)
+ Creator | Thanks To | Thanks To
