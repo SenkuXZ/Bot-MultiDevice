@@ -412,6 +412,7 @@ Info: *bold* hash is Locked
  ${Object.entries(global.db.data.cmd).map(([key, value], index) => `${index + 1}. ${value.locked ? `*${key}*` : key} 
 *Command: ${value.q}*
 *Creator : @${value.creator.split("@")[0]}*
+*Create Time : ${clockString(new Date - value.at)} ago*
 *Locked : ${value.locked}*
 
 `).join('\n')}
