@@ -85,10 +85,6 @@ break
 require('./message/dasha')(dasha, msg, m, M, help, setting)
 })
 
-
-
-
-
 dasha.ev.on('group-participants.update', async (anu) => {
 require('./message/group')(dasha, anu)
 })
