@@ -824,6 +824,11 @@ let google = require('../plugins/google')
 google(M, dasha, fetchJson, sendFile, prefix, command, q)
 break
 
+case 'whatmusic':
+let whatmusic = require('../plugins/whatmusic')
+whatmusic(M)
+break
+
 default:
 }
 } catch (err) {
