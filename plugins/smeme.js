@@ -14,7 +14,7 @@ try {
 await conn.sendImageAsSticker(M.chat, meme, M, { packname: setting.packname, author: setting.author })
 } catch (e) { 
 M.reply('gagal membuat stiker, Mencoba Mengirim gambar') 
-await sendFile(M.chat, meme,'Nih Banh', M)
+await sendFile(M.chat, meme,'Nih', M)
 }
 }
 
