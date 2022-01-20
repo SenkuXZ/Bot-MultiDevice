@@ -903,6 +903,17 @@ let whatmusic = require('../plugins/whatmusic')
 whatmusic(M)
 break
 
+case 'smeme':
+let smeme = require('../plugins/smeme')
+smeme(M, dasha, sendFile, q, setting)
+break;
+
+case 'smemelower':
+let smemelower = require('../plugins/smemelower')
+smemelower(M, dasha, sendFile, q, setting)
+break;
+
+
 default:
 }
 } catch (err) {
