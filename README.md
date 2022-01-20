@@ -2,7 +2,7 @@
 <p align="center">
 	<img src="https://avatars.githubusercontent.com/SenkuXZ" width="35%" style="margin-left: auto;margin-right: auto;display: block;">
 </p>
-<h1 align="center">Senkuu XZ</h1>
+<h1 align="center">Senkuu</h1>
 
 [![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/GVwpKf83s42D1CnIfDW19G)
 
