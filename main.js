@@ -45,6 +45,7 @@ global.db.data = {
 users: {},
 chats: {},
 database: {},
+absen: {},
 cmd: {},
 settings: {},
 ...(global.db.data || {})
