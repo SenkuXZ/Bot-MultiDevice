@@ -55,7 +55,7 @@ const { UploadFileUgu, webp2mp4File, TelegraPh } = require('../lib/uploader')
 
 moment.tz.setDefault("Asia/Jakarta").locale("id");
  
-module.exports = async(dasha, msg, m, M, help, setting) => {
+module.exports = async(dasha, msg, mess, m, M, help, setting) => {
 try {
 let { ownerNumber, botName } = setting
 let timeout = 60000
@@ -913,6 +913,69 @@ let smemelower = require('../plugins/smemelower')
 smemelower(M, dasha, sendFile, q, setting)
 break;
 
+
+
+
+case 'yts': case 'ytsearch':
+if (args.length < 0) return reply(`Kirim perintah ${prefix + command} query`)				
+reply('Tunggu sebentar..')			 
+yts(q).then( data => {				 
+let yt = data.videos				 
+var jumlah = 15				 
+if (yt.length < jumlah) jumlah = yt.length				
+var no = 0				 
+let txt = `*YOUTUBE SEARCH* 
+
+*Data berhasil didapatkan* 
+*Hasil pencarian dari ${q}* 
+
+*${prefix}getmusic <no urutan>* 
+*${prefix}getvideo <no urutan>* 
+Untuk mengambil Audio/Video dari hasil pencarian` 
+for (let i = 0; i < jumlah; i++) {				 
+no += 1				 
+txt += `\n─────────────────\n\n*No Urutan: ${no.toString()}*\n*▢ Judul :* ${yt[i].title}\n*▢ ID :* ${yt[i].videoId}\n*▢ Channel :* ${yt[i].author.name}\n*▢ Upload :* ${yt[i].ago}\n*▢ Ditonton :* ${yt[i].views}\n*▢ Duration :* ${yt[i].timestamp}\n*▢ URL :* ${yt[i].url}\n`				
+}				
+dasha.sendMessage(from, { image: { url: yt[0].image }, caption: txt }, { quoted: msg })				
+}).catch(() => reply('Error!'))			
+break
+
+case 'getmusic':	 
+if (!isQuotedImage) return reply(`Balas hasil pencarian dari ${prefix}ytsearch dengan teks ${command} <no urutan>`)		
+if (!quotedMsg.fromMe)return reply(`Hanya bisa mengambil hasil dari pesan bot`)				
+if (args.length < 0) return reply(`Balas hasil pencarian dari ${prefix}ytsearch dengan teks ${command} <no urutan>`)	
+var kuoted = await quotedMsg.chats 
+var ytIdRegex = /(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/gi 
+var arrey = [...kuoted.matchAll(ytIdRegex)].map(x => x[1]) 
+if (arrey.length == 0) return reply(`Reply hasil dari *${prefix}ytsearch* dengan perintah *${command}* urutan`) 
+if (isNaN(args[0])) return reply(`Hanya support angka! pilih angka 1 sampai 10\nContoh : ${command} 2`) 
+if (args[1] > arrey.length) return reply(`Urutan Hasil *${prefix}ytsearch* Hanya Sampai *${arrey.length}*`)			 
+reply('Tunggu sebentar..')			 
+xfar.Youtube(`https://youtube.com/watch?v=${arrey[args[0] -1]}`).then( data => {			 
+var teks = `*Youtube Audio Downloader*\n\n*≻ Title :* ${data.title}\n*≻ Quality :* ${data.medias[7].quality}\n*≻ Size :* ${data.medias[7].formattedSize}\n*≻ Url Source :* ${data.url}\n\n_wait a minute sending media..._`			
+dasha.sendMessage(from, { image: { url: data.thumbnail }, caption: teks }, { quoted: msg })			 
+sendFile(from,data.medias[7].url ,'', msg)
+		}).catch(() => reply('Error!'))			 
+		break
+
+
+
+case 'getvideo':
+if (!isQuotedImage) return reply(`Balas hasil pencarian dari ${prefix}ytsearch dengan teks ${command} <no urutan>`)
+if (!quotedMsg.fromMe) return reply(`Hanya bisa mengambil hasil dari pesan bot`)
+if (args.length < 0) return reply(`Balas hasil pencarian dari ${prefix}ytsearch dengan teks ${command} <no urutan>`)
+var kuoted = await quotedMsg.chats
+var ytIdRegex = /(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/gi
+var arrey = [...kuoted.matchAll(ytIdRegex)].map(x => x[1])
+if (arrey.length == 0) return reply(`Reply hasil dari *${prefix}ytsearch* dengan perintah *${command}* urutan`)
+if (isNaN(args[0])) return reply(`Hanya support angka! pilih angka 1 sampai 10\nContoh : ${command} 2`)
+if (args[1] > arrey.length) return reply(`Urutan Hasil *${prefix}ytsearch* Hanya Sampai *${arrey.length}*`)
+    reply('Tunggu sebentar..')
+  xfar.Youtube(`https://youtube.com/watch?v=${arrey[args[0] -1]}`).then( data => {
+      var teks = `*Youtube Video Downloader*\n\n*≻ Title :* ${data.title}\n*≻ Quality :* ${data.medias[1].quality}\n*≻ Size :* ${data.medias[1].formattedSize}\n*≻ Url Source :* ${data.url}`
+sendFile(from,data.medias[1].url, teks, msg)
+}).catch(() => reply('Error'))
+        break
 
 default:
 }
