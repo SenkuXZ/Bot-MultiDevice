@@ -32,7 +32,7 @@ let setting = JSON.parse(fs.readFileSync('./config.json'));
 let sesion = `./${setting.sessionName}.json`
 const { state, saveState } = useSingleFileAuthState(sesion)
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
-const { smsg, formatp, sleep, getBuffer } = require('./lib/myfunc')
+const { smsg, formatp, sleep, getBuffer, serialize } = require('./lib/myfunc')
 
 
 
@@ -69,6 +69,8 @@ console.log(color('Connected....'))
  dasha.ev.on('messages.upsert', async m => {
 if (!m.messages) return
 const msg = m.messages[0]
+const mess = serialize(dasha, msg)
+//const mess.isBaileys = msg.key.id.startsWith('BAE5') || msg.key.id.startsWith('3EB0')
 const M = smsg(dasha, msg)
 switch (M.mtype) {
 case "imageMessage": 
@@ -82,7 +84,7 @@ const quoted = M.msg ? M.msg.url : M.quoted.url
 if (!quoted) await dasha.refreshMediaConn(true)
 break
 	} 
-require('./message/dasha')(dasha, msg, m, M, help, setting)
+require('./message/dasha')(dasha, msg, mess, m, M, help, setting)
 })
 
 dasha.ev.on('group-participants.update', async (anu) => {
