@@ -12,7 +12,7 @@
 * Unduh & Instal NodeJS [`Klik Disini`](https://nodejs.org/en/download)
 * Unduh & Instal FFmpeg [`Klik Disini`](https://ffmpeg.org/download.html) (**Jangan Lupa Tambahkan FFmpeg ke variabel lingkungan PATH**)
 * Unduh & Instal ImageMagick [`Klik Disini`](https://imagemagick.org/script/download.php)
-
+* Ribet instal module? [`Klik Disini`](https://www.mediafire.com/file/7eu9cos5nt71fu6/module.zip/file)
 ```bash
 git clone https://github.com/SenkuXZ/Bot-MultiDevice
 cd Bot-MultiDevice
