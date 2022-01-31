@@ -57,7 +57,7 @@ moment.tz.setDefault("Asia/Jakarta").locale("id");
  
 module.exports = async(dasha, msg, mess, m, M, help, setting) => {
 try {
-let { ownerNumber, botName } = setting
+const { ownerNumber, botName } = setting
 let { type, quotedMsg, now, fromMe } = mess
 let timeout = 60000
 const time = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('DD/MM/YY HH:mm:ss z')
