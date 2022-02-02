@@ -779,6 +779,26 @@ global.db.data.absen[from] = [
 break
 
 
+//***** TQ TO DIKA *****\\
+case 'emojimix':
+if(!q)return reply((`Example : ${prefix + command} 😎+😙`)
+let emo1 = q.split("+")[0]
+let emo2 = q.split("+")[1]
+fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emo1 ? emo1 : '😎')}_${encodeURIComponent(emo2 ? emo2 : '😙')}`).then(async i =>{
+let teks = `*Result of Emojimix*
+
+Locale : ${i.locale}
+Title : ${i.results[0].h1_title}
+Create : ${i.results[0].created}
+Url : ${i.results[0].url}
+
+_Mencoba mengirim Sticker.._
+`.trim()
+reply(teks)
+await dasha.sendImageAsSticker(M.chat, i.results[0].url, M, { packname: setting.packname, author: setting.author })
+})
+break
+
 
 /**************** PLUGINS ***************/
 
